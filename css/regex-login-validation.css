@@ -1,0 +1,42 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  margin: 10%;
+}
+
+label {
+  display: block;
+  font-size: 14pt;
+}
+
+input {
+  margin: 10px 0;
+  font-size: 14pt;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #bbbbbb;
+  border-radius: 7px;
+}
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.comment {
+  color: #999999;
+  padding-bottom: 20px;
+}
+
+#submit {
+  background-color: #007bff;
+  padding: 10px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
