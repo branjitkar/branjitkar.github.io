@@ -1,0 +1,93 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+}
+#nav {
+  display: flex;
+  background-image: linear-gradient(#70c4f5, #219de5);
+  color: white;
+}
+#nav #title {
+  padding: 20px;
+  font-size: 14pt;
+  margin-right: 20px;
+}
+
+#nav-links {
+  padding: 20px;
+  margin: 0;
+}
+#nav-links li {
+  display: inline;
+  padding: 10px 40px;
+  margin-left: 10px;
+  border-left: 1px solid #ffffff;
+  opacity: 80%;
+}
+#nav-end {
+  margin: auto 10px auto auto;
+}
+#signout {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  opacity: 90%;
+}
+#form-container {
+  width: 90%;
+  margin: auto;
+}
+#form-container h1 {
+  font-size: 18pt;
+  font-weight: normal;
+}
+#form-body {
+  margin-left: 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+#form-body label {
+  margin-top: 15px;
+}
+#form-body input,
+select {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #bbbbbb;
+  border-radius: 5px;
+  display: block;
+  font-size: 12pt;
+}
+#buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 10px;
+}
+#buttons input {
+  font-size: 14px;
+  margin-right: 2.5%;
+  padding: 10px;
+  background: none;
+  border: 2px solid;
+  border-radius: 5px;
+}
+#buttons #reset {
+  border-color: rgb(17, 17, 73);
+  color: rgb(17, 17, 73);
+}
+#buttons #cancel {
+  border-color: rgb(219, 36, 12);
+  color: rgb(219, 36, 12);
+}
+#buttons #add-product {
+  border-color: rgb(67, 162, 240);
+  color: rgb(67, 162, 240);
+}

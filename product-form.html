@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>SRM System</title>
+    <link href="css/product-form.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="nav">
+        <span id="title">MUM Golden Dome Market:::SRM System</span>
+        <ul id="nav-links">
+          <li>Products</li>
+          <li>Suppliers</li>
+        </ul>
+        <div id="nav-end">
+          <span>Hello!</span>
+          <input id="signout" type="button" value="Sign Out" />
+        </div>
+      </div>
+      <div id="form-container">
+        <h1>New Product Form</h1>
+        <div id="form-body">
+          <label>Product Number<input type="text" /></label>
+          <label>Quantity in stock<input type="text" value="0" /></label>
+          <label>Name<input type="text" /></label>
+          <label
+            >Supplier<select>
+              <option>Select a supplier</option>
+            </select></label
+          >
+          <label>Unit Price<input type="text" value="0.0" /></label>
+          <label
+            >Date Supplied<input type="text" placeholder="yyyy-mm-dd"
+          /></label>
+        </div>
+        <div id="buttons">
+          <input type="button" id="add-product" value="Add Product" />
+          <input type="button" id="cancel" value="Cancel" />
+          <input type="button" id="reset" value="Reset" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
