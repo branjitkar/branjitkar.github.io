@@ -70,6 +70,7 @@ function stopAnimation() {
 function setControlEnable(animationRunning) {
   document.getElementById("start").disabled = animationRunning;
   document.getElementById("stop").disabled = !animationRunning;
+  document.getElementById("animation").disabled = animationRunning;
   document.getElementById("text-area").disabled = animationRunning;
 }
 
