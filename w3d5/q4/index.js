@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/css", express.static(path.join(__dirname, "css")));
 
-app.post("/output", (req, res) => {
+app.post("/result", (req, res) => {
   let name = req.body.name;
   let age = req.body.age;
   if (!name) {
