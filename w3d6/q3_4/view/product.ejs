@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Products</title>
+    <link href="/style/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h2>Product</h2>
+    <div id="product-container">
+      <h3><%=name%></h3>
+      <p><%=desc%></p>
+      <p>
+        ID: <%=id%><br />
+        Price: <%=price%><br />
+      </p>
+      <form>
+        <input name="name" type="hidden" value="<%=id%>" />
+        <input type="submit" value="Add to Cart" />
+      </form>
+    </div>
+  </body>
+</html>
