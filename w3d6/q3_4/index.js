@@ -42,7 +42,7 @@ app.get("/addcart", (req, res) => {
   let id = parseInt(req.query.id);
   let product = products.filter((p) => p.id == id);
   if (product) {
-    let cartId = cart[cart.length - 1].cartId + 1;
+    let cartId = cart.length > 0 ? cart[cart.length - 1].cartId + 1 : 1;
     cart.push({ cartId, ...product[0] });
   }
   res.redirect("/");
