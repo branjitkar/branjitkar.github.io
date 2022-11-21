@@ -2,11 +2,24 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 20px;
 }
-
-#cart {
-  display: flex;
+#main {
+  display: grid;
+  grid-template-areas: "p p c";
 }
-
+#products {
+  grid-area: p;
+  padding: 10px;
+}
+#cart {
+  grid-area: c;
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 10px;
+}
+#container {
+  display: flex;
+  flex-wrap: wrap;
+}
 #product-container {
   margin: 10px;
   padding: 15px;
@@ -14,7 +27,6 @@ body {
   border-radius: 10px;
   width: fit-content;
 }
-
 #product-container h3 {
   padding: 0;
   margin: 0;
