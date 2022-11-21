@@ -8,7 +8,7 @@
       ID: <%=product.id%><br />
       Price: <%=product.price%><br />
     </p>
-    <form>
+    <form action="/addcart">
       <input name="id" type="hidden" value="<%=product.id%>" />
       <input type="submit" value="Add to Cart" />
     </form>

@@ -17,8 +17,8 @@
           Price: <%=product.price%><br />
           Quantity: <%=product.quantity%><br />
         </p>
-        <form>
-          <input name="name" type="hidden" value="<%=product.id%>" />
+        <form action="/removecart">
+          <input name="cartId" type="hidden" value="<%=product.cartId%>" />
           <input type="submit" value="Remove" />
         </form>
       </div>
