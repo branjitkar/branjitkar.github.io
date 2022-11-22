@@ -78,21 +78,17 @@ const addToCart = function (cart, id) {
 };
 
 const removeFromCart = function (cart, id) {
-  console.log(id);
   let productInCart = cart.filter((p) => p.id == id)[0];
-  console.log(productInCart);
   if (productInCart) {
     if (productInCart.quantity == 1) {
       return cart.filter((x) => x.id != id);
     }
-    console.log("here");
     cart = cart.map((x) => {
       if (x.id == id) {
         x.quantity--;
       }
       return x;
     });
-    console.log(cart);
   }
   return cart;
 };
