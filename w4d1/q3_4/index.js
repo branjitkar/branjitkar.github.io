@@ -43,23 +43,56 @@ app.get("/", (req, res) => {
 
 app.post("/addtocart", (req, res) => {
   let id = parseInt(req.body.id);
-  let product = products.filter((p) => p.id == id);
-  if (product) {
-    let cart = req.session.cart ? req.session.cart : [];
-    let cartId = cart.length > 0 ? cart[cart.length - 1].cartId + 1 : 1;
-    cart.push({ cartId, ...product[0] });
-    req.session.cart = cart;
-  }
+  let cart = req.session.cart ? req.session.cart : [];
+  req.session.cart = addToCart(cart, id);
   res.redirect("/");
 });
 
 app.post("/removefromcart", (req, res) => {
-  let cartId = parseInt(req.body.cartId);
-  let cart = req.session.cart;
-  req.session.cart = req.session.cart.filter((c) => c.cartId != cartId);
+  let id = parseInt(req.body.id);
+  req.session.cart = removeFromCart(req.session.cart, id);
   res.redirect("/");
 });
 
 app.listen(3000, () => {
   console.log("Running at port 3000...");
 });
+
+const addToCart = function (cart, id) {
+  let product = products.filter((p) => p.id == id);
+  if (product.length > 0) {
+    let productInCart = cart.filter((p) => p.id == id)[0];
+    if (productInCart) {
+      cart = cart.map((x) => {
+        if (x.id == id) {
+          x.quantity++;
+        }
+        return x;
+      });
+      return cart;
+    }
+    product[0].quantity = 1;
+    cart.push(product[0]);
+    return cart;
+  }
+};
+
+const removeFromCart = function (cart, id) {
+  console.log(id);
+  let productInCart = cart.filter((p) => p.id == id)[0];
+  console.log(productInCart);
+  if (productInCart) {
+    if (productInCart.quantity == 1) {
+      return cart.filter((x) => x.id != id);
+    }
+    console.log("here");
+    cart = cart.map((x) => {
+      if (x.id == id) {
+        x.quantity--;
+      }
+      return x;
+    });
+    console.log(cart);
+  }
+  return cart;
+};
